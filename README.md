@@ -1,3 +1,9 @@
+>[!INFO]
+> Everything in this repository is licenced under the terms of LICENCE.md except for the assets folder. The assets folder has appropriate licences in the credits.md file.
+
+
+
+
 https://github.com/OSInside/kiwi-descriptions
 
 https://osinside.github.io/kiwi/
