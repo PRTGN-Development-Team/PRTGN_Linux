@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image schemaversion="7.5" name="PRTGN-Linux">
+
+    <description type="system">
+        <author>PRTGN Development Team</author>
+        <contact>prtgn_dev@protonmail.com</contact>
+        <specification>PRTGN Linux. Powered by Fedora.</specification>
+    </description>
+
+    <preferences>
+        <version>1.0.0</version>
+        <packagemanager>dnf</packagemanager>
+        <locale>en_US</locale>
+        <keytable>us</keytable>
+        <timezone>America/New_York</timezone>
+        <rpm-check-signatures>false</rpm-check-signatures>
+
+        <type
+                image="iso"
+                flags="overlay"
+                firmware="uefi"
+                hybridpersistent_filesystem="ext4"
+                hybridpersistent="true">
+            <bootloader name="grub2" console="gfxterm" timeout="10"/>
+        </type>
+    </preferences>
+
+    <!-- Repositories -->
+    <repository type="rpm-md" alias="fedora" priority="99">
+        <source path="https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-41&amp;arch=x86_64"/>
+    </repository>
+    <repository type="rpm-md" alias="updates">
+        <source path="https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f41&amp;arch=x86_64"/>
+    </repository>
+
+    <!-- Bootstrap packages -->
+    <packages type="bootstrap">
+        <package name="fedora-release"/>
+        <package name="fedora-release-kde"/>
+        <package name="glibc-minimal-langpack"/>
+        <package name="dnf"/>
+    </packages>
+
+    <!-- Main image packages -->
+    <packages type="image">
+        <package name="dracut-kiwi-live"/>
+        <package name="kernel"/>
+        <package name="kernel-modules"/>
+        <package name="kernel-modules-extra"/>
+        <package name="systemd"/>
+        <package name="dracut"/>
+        <package name="grub2"/>
+        <package name="grub2-efi-x64"/>
+        <package name="shim"/>
+        <package name="NetworkManager"/>
+        <package name="NetworkManager-wifi"/>
+        <package name="firewalld"/>
+        <package name="sudo"/>
+        <package name="bash"/>
+        <package name="glibc-all-langpacks"/>
+        <package name="plasma-desktop"/>
+        <package name="plasma-nm"/>
+        <package name="plasma-pa"/>
+        <package name="plasma-systemsettings"/>
+        <package name="sddm"/>
+        <package name="sddm-kcm"/>
+        <package name="kwin"/>
+        <package name="konsole5"/>
+        <package name="dolphin"/>
+        <package name="kate"/>
+        <package name="spectacle"/>
+        <package name="ark"/>
+        <package name="gwenview"/>
+        <package name="okular"/>
+        <package name="breeze"/>
+        <package name="breeze-gtk"/>
+        <package name="kde-gtk-config"/>
+        <package name="noto-fonts-common"/>
+        <package name="adobe-source-code-pro-fonts"/>
+        <package name="firefox"/>
+        <package name="vlc"/>
+        <package name="alsa-utils"/>
+        <package name="pipewire"/>
+        <package name="pipewire-pulseaudio"/>
+        <package name="mesa-dri-drivers"/>
+        <package name="rust"/>
+        <package name="cargo"/>
+    </packages>
+
+    <!-- Packages to remove -->
+    <packages type="delete">
+        <package name="akregator"/>
+        <package name="kwrite"/>
+        <package name="dragon"/>
+    </packages>
+
+</image>
