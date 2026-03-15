@@ -13,12 +13,21 @@ https://pagure.io/fedora-kiwi-descriptions
 
 --
 
-# Install the boxed plugin
->pip install kiwi-boxed-plugin
+sudo sentenforce 0
 
-# Then build using boxbuild instead of the normal build command
->sudo kiwi-ng --type iso system boxbuild
-     --box fedora \
-     -- \
-     --description ./distro-config \
-     --target-dir ./var/kiwi/output
+sudo kiwi-ng --type iso system build \
+    --description ./distro-config \
+    --target-dir ./kiwi-output
+
+sudo sentenforce 1
+
+
+<!-- # Install the boxed plugin -->
+<!-- >pip install kiwi-boxed-plugin -->
+
+<!-- # Then build using boxbuild instead of the normal build command -->
+<!-- >sudo kiwi-ng --type iso system boxbuild -->
+<!--      --box fedora \ -->
+<!--      -- \ -->
+<!--      --description ./distro-config \ -->
+<!--      --target-dir ./var/kiwi/output -->

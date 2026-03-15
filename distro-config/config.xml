@@ -9,7 +9,7 @@
 
     <preferences>
         <version>1.0.0</version>
-        <packagemanager>dnf</packagemanager>
+        <packagemanager>dnf5</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
         <timezone>America/New_York</timezone>
@@ -27,10 +27,10 @@
 
     <!-- Repositories -->
     <repository type="rpm-md" alias="fedora" priority="99">
-        <source path="https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-41&amp;arch=x86_64"/>
+        <source path="https://dl.fedoraproject.org/pub/fedora/linux/releases/43/Everything/x86_64/os/"/>
     </repository>
     <repository type="rpm-md" alias="updates">
-        <source path="https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f41&amp;arch=x86_64"/>
+        <source path="https://dl.fedoraproject.org/pub/fedora/linux/updates/43/Everything/x86_64/"/>
     </repository>
 
     <!-- Bootstrap packages -->
@@ -38,7 +38,7 @@
         <package name="fedora-release"/>
         <package name="fedora-release-kde"/>
         <package name="glibc-minimal-langpack"/>
-        <package name="dnf"/>
+        <package name="dnf5"/>
     </packages>
 
     <!-- Main image packages -->
@@ -72,10 +72,10 @@
         <package name="ark"/>
         <package name="gwenview"/>
         <package name="okular"/>
-        <package name="breeze"/>
+        <package name="plasma-breeze"/>
         <package name="breeze-gtk"/>
         <package name="kde-gtk-config"/>
-        <package name="noto-fonts-common"/>
+        <package name="google-noto-fonts-common"/>
         <package name="adobe-source-code-pro-fonts"/>
         <package name="firefox"/>
         <package name="vlc"/>
@@ -85,13 +85,6 @@
         <package name="mesa-dri-drivers"/>
         <package name="rust"/>
         <package name="cargo"/>
-    </packages>
-
-    <!-- Packages to remove -->
-    <packages type="delete">
-        <package name="akregator"/>
-        <package name="kwrite"/>
-        <package name="dragon"/>
     </packages>
 
 </image>
