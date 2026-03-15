@@ -1,5 +1,5 @@
->[!INFO]
-> Everything in this repository is licenced under the terms of LICENCE.md except for the assets folder. The assets folder has appropriate licences in the credits.md file.
+> [!INFO]
+> Everything in this repository is licenced under the terms of LICENCE.md unless separately stated with a credits.md file or metadata.json file.
 
 
 
@@ -13,14 +13,21 @@ https://pagure.io/fedora-kiwi-descriptions
 
 --
 
-sudo sentenforce 0
+sudo setenforce 0
 
-sudo kiwi-ng --type iso system build \
+sudo kiwi-ng --debug --type iso system build \
     --description ./distro-config \
     --target-dir ./kiwi-output
 
-sudo sentenforce 1
+sudo setenforce 1
 
+--
+
+git add .
+
+git commit
+
+git push
 
 <!-- # Install the boxed plugin -->
 <!-- >pip install kiwi-boxed-plugin -->

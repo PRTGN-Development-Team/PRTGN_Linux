@@ -1,0 +1,14 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Chimmie Firefly, https://xenia.mrrp.es/#wallpaper-white"
+      }
+    ],
+    "Id": "xenia-fox-light",
+    "License": "CC0-1.0",
+    "Name": "xenia-fox-light",
+    "Version": "1.0"
+  },
+  "KPackageStructure": "Wallpaper/Images"
+}

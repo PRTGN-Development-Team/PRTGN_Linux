@@ -85,6 +85,10 @@
         <package name="mesa-dri-drivers"/>
         <package name="rust"/>
         <package name="cargo"/>
+        <package name="calamares"/>
+        <package name="calamares-libs"/>
+        <package name="livesys-scripts"/>
+        <package name="sddm-breeze"/>
     </packages>
 
 </image>

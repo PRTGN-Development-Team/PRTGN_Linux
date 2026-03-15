@@ -1,0 +1,14 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Chimmie Firefly, https://xenia.mrrp.es/#xenia_levitate3"
+      }
+    ],
+    "Id": "xenia_fox_linux_tux",
+    "License": "CC-BY-NC-SA-4.0",
+    "Name": "xenia_fox_linux_tux",
+    "Version": "1.0"
+  },
+  "KPackageStructure": "Wallpaper/Images"
+}

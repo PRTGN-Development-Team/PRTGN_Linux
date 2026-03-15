@@ -1,0 +1,14 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Chimmie Firefly, https://xenia.mrrp.es/#wallpaper"
+      }
+    ],
+    "Id": "xenia-fox-dark",
+    "License": "CC0-1.0",
+    "Name": "xenia-fox-dark",
+    "Version": "1.0"
+  },
+  "KPackageStructure": "Wallpaper/Images"
+}

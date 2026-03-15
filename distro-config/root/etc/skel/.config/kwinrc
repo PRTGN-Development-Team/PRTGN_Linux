@@ -1,0 +1,16 @@
+[Compositing]
+Enabled=true
+Backend=OpenGL
+GLCore=true
+
+[Effect-overview]
+BorderActivate=7
+```
+
+### Default Wallpaper
+```
+root/
+└── usr/
+    └── share/
+        └── backgrounds/
+            └── default.jpg   ← your wallpaper file

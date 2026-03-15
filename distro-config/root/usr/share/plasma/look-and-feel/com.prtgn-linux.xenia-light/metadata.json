@@ -1,0 +1,14 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "PRTGN-Development-Team (Development), Chimmie Firefly (Unaffiliated, Art)"
+      }
+    ],
+    "Id": "com.prtgn-linux.xenia-light",
+    "Name": "PRTGN Light",
+    "Version": "1.0",
+    "Website": "https://github.com/PRTGN-Development-Team/PRTGN_Linux"
+  },
+  "KPackageStructure": "Plasma/LookAndFeel"
+}
