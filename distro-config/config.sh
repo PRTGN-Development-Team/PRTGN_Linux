@@ -17,6 +17,7 @@ systemctl enable firewalld
 systemctl enable fstrim.timer
 systemctl enable livesys.service
 systemctl enable livesys-late.service
+systemctl set-default graphical.target
 # Add a desktop shortcut for Calamares
 cat > /usr/share/applications/calamares.desktop << 'EOF'
 [Desktop Entry]
@@ -54,6 +55,14 @@ cat > /etc/sddm.conf.d/theme.conf << 'EOF'
 [Theme]
 Current=breeze
 EOF
+
+# Force wallpaper for live user after their home dir is created
+mkdir -p /home/live/.config
+cat > /home/live/.config/plasma-org.kde.plasma.desktop-appletsrc << 'EOF'
+[Containments][1][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/xenia-fox-dark/contents/images/1366x768.png
+EOF
+chown -R live:live /home/live/.config
 
 # ============================================================
 # DEFAULT KDE CONFIGURATION FOR NEW USERS
@@ -97,7 +106,7 @@ EOF
 
 cat > /etc/skel/.config/plasma-org.kde.plasma.desktop-appletsrc << 'EOF'
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/xenia-fox-dark/contents/images/1366x768.jpg
+Image=file:///usr/share/wallpapers/xenia-fox-dark/contents/images/1366x768.png
 EOF
 
 cat > /etc/skel/.config/plasmashellrc << 'EOF'

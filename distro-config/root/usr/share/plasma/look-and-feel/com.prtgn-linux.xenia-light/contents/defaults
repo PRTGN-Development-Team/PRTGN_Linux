@@ -11,8 +11,11 @@ name=breeze-light
 library=org.kde.breeze
 theme=Breeze
 
-[package]
-wallpaper=xenia-fox-light
+[Wallpaper]
+defaultWallpaperTheme=xenia-fox-light
+defaultFileSuffix=.png
+defaultWidith=1366
+defaultHeight=768
 
 [icons]
 Theme=breeze-light
