@@ -1,4 +1,4 @@
-> [!INFO]
+> [!NOTE]
 > Everything in this repository is licenced under the terms of LICENCE.md unless separately stated with a credits.md file or metadata.json file.
 
 
